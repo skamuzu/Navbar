@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F1F8FD;
+    font-family: "Roboto", sans-serif;
+}
+
+nav, .nav-center {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 0px 0px 10px lightgray;
+    z-index: 2;
+}
+
+.nav-center {
+    height: 4em;
+    position: relative;
+}
+
+nav, .nav-center, .nav-header{
+    display: flex;
+}
+
+.links, .social-icons {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+i {
+    color: #49A6E9;
+    background-color: white;
+    font-size: 1.4em;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.links {
+    gap: 1.5em;
+}
+
+.social-icons {
+    gap: 1em;
+}
+
+.links a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+}
+
+@media(max-width:965px) {
+    .social-icons {
+        display: none;
+    }
+
+    .nav-header{
+        justify-content: space-between;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .nav-toggle{
+        display: block;
+        border: none;
+        background: none;
+        font-size: 1.4em;
+    }
+    
+    .nav-center {
+        flex-direction: column;
+    }
+
+    .links {
+        position: fixed;
+        align-items: flex-start;
+        flex-direction: column;
+        /* transform: translateY(-100%); */
+        top: 6rem;
+        margin-inline-end: auto;
+        background-color: white;
+        width: 100%;
+        padding: 0  2em;
+        gap: 0;
+        z-index: 1;
+        overflow: hidden;
+        transition: height 0.4s ease-in-out;
+        height: 0;
+    }
+
+    .links.show {
+       height: 16rem;
+       padding: 0 2em
+    }
+
+
+
+
+
+
+    .links li {
+        width: 100%;
+        padding: 1em;
+        border-radius: 0.5em;
+    }
+
+    .links li a{
+        padding-inline-start: 0;
+        transition: padding-inline-start 0.4s ease-in-out, color 0.3s;
+
+    }
+
+    .links li:hover , .links li:active {
+        background-color: #49A6E9;
+    }
+
+    .links li:hover a{
+        color: white;
+        padding-inline-start: 1em;
+    }
+
+}
