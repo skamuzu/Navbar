@@ -99,7 +99,7 @@ i {
         margin-inline-end: auto;
         background-color: white;
         width: 100%;
-        padding: 0  2em;
+        padding: 0  1.2em;
         gap: 0;
         z-index: 1;
         overflow: hidden;
@@ -109,13 +109,7 @@ i {
 
     .links.show {
        height: 16rem;
-       padding: 0 2em
     }
-
-
-
-
-
 
     .links li {
         width: 100%;
@@ -135,7 +129,7 @@ i {
 
     .links li:hover a{
         color: white;
-        padding-inline-start: 1em;
+        padding-inline-start: 0.4em;
     }
 
 }
